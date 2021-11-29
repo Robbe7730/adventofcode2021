@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pushd day$1
+make part$2 < $3
+popd

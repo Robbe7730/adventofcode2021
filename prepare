@@ -1,0 +1,7 @@
+#!/bin/bash
+
+pushd "day$1"
+
+make prepare_part$2
+
+popd
