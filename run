@@ -1,5 +1,11 @@
 #!/bin/bash
 
+file="$3"
+
+if [ -z "$file" ]; then
+    file=input
+fi
+
 pushd day$1
-make part$2 < $3
+make run_part$2 < $file
 popd
