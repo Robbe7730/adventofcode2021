@@ -6,6 +6,6 @@ if [ -z "$file" ]; then
     file=input
 fi
 
-pushd day$1
+cd day$1
 make run_part$2 < $file
-popd
+cd -
