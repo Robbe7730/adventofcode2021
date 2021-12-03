@@ -2,14 +2,14 @@ prepare_part1:
 	fbc part1.bas
 
 prepare_part2:
-	echo "Preparing part 2"
+	fbc part2.bas
 
 
 run_part1:
 	./part1
 
 run_part2:
-	echo "Running part 2"
+	./part2
 
 
 part1: | prepare_part1 run_part1
