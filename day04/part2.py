@@ -19,8 +19,8 @@ while True:
         break
 
 boards_np = np.array(boards, dtype='uint8')
-is_marked_np = np.zeros(boards_np.shape, dtype='uint8')
-row_col_marked_np = np.zeros((boards_np.shape[0], 10), dtype='uint64')
+is_marked_np = np.ones(boards_np.shape, dtype='uint8')
+row_col_marked_np = np.full((boards_np.shape[0], 10), 5, dtype='uint64')
 result_np = np.zeros((1,), dtype='uint64')
 result_np[0] = 0
 
@@ -55,11 +55,11 @@ result_buffer = cl.Buffer(
 with open("kernel.cl", "r") as kernel_file:
     prg = cl.Program(ctx, kernel_file.read()).build()
 
-knl = prg.part1
+knl = prg.part2
 
-i = 0
+i = len(numbers_np) - 1
 
-while result_np[0] == 0:
+while result_np[0] == 0 and i >= 0:
     knl(
         queue,
         boards_np.shape,
@@ -73,6 +73,6 @@ while result_np[0] == 0:
 
     cl.enqueue_copy(queue, result_np, result_buffer)
 
-    i+=1
+    i-=1
 
 print(result_np[0])
