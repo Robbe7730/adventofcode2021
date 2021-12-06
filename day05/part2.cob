@@ -67,7 +67,7 @@
 010931       MOVE x1 TO curr_x
 010932       MOVE y1 TO curr_y
 010940       PERFORM INCREASE_COUNT
-010941         UNTIL curr_x = x2 OR curr_y = y2
+010941         UNTIL (curr_x - dx) = x2 OR (curr_y - dy) = y2
 010950     END-IF
 011070     READ SYSIN
 011071       AT END SET EOF TO TRUE
