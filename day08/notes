@@ -1,0 +1,70 @@
+ aaa
+b   c
+b   c
+b   c
+ ddd
+e   f
+e   f
+e   f
+ ggg
+
+abc efg
+  c  f
+a cde g
+a cd fg
+ bcd f
+ab d fg
+ab defg
+a c  f
+abcdefg
+abcd fg
+8687497
+
+options = {
+    "a": abcdefg,
+    "b": abcdefg,
+    "c": abcdefg,
+    "d": abcdefg,
+    "e": abcdefg,
+    "f": abcdefg,
+    "g": abcdefg
+}
+
+acedgfb
+cdfbe
+gcdfa
+fbcad
+dab
+cefabd
+cdfgeb
+eafb
+cagedb
+ab
+
+a:8
+b:9
+c:7
+d:8
+e:6
+f:7
+g:4
+
+g -> e
+e -> b
+b -> f
+a -> c
+d -> a
+f -> d
+c -> g
+
+read inputs
+
+count occurences
+occurs 4 times -> e
+occurs 6 times -> b
+occurs 9 times -> f
+
+find len 2 => options[w[i]] not set -> c
+find len 3 => options[w[i]] not set -> a
+find len 4 => options[w[i]] not set -> d
+not set -> g

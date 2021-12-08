@@ -2,7 +2,7 @@ prepare_part1:
 	fpc part1.pas
 
 prepare_part2:
-	fpc part1.pas
+	fpc part2.pas
 
 
 run_part1:
