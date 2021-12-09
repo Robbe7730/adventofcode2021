@@ -9,7 +9,7 @@ run_part1:
 	perl part1.pl
 
 run_part2:
-	echo "Running part 2"
+	perl part2.pl
 
 
 part1: | prepare_part1 run_part1
