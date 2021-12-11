@@ -9,7 +9,7 @@ run_part1:
 	go run ./part1.go
 
 run_part2:
-	echo "Running part 2"
+	go run ./part2.go
 
 
 part1: | prepare_part1 run_part1
