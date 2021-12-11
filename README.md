@@ -16,3 +16,4 @@ Every day has a Makefile with `prepare_part_1`, `prepare_part_2`, `run_part_1` a
  8. [Pascal](https://en.wikipedia.org/wiki/Pascal_(programming_language))
  9. [Perl](https://www.perl.org/)
 10. [Prolog](https://www.swi-prolog.org/)
+11. [Go](https://go.dev/)
