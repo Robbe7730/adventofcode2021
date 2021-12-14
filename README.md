@@ -19,3 +19,4 @@ Every day has a Makefile with `prepare_part_1`, `prepare_part_2`, `run_part_1` a
 11. [Go](https://go.dev/)
 12. [Julia](https://julialang.org/)
 13. [R](https://www.r-project.org/)
+14. [Scala](https://scala-lang.org/)
