@@ -2,14 +2,14 @@ prepare_part1:
 	ghc -o part1 part1.hs
 
 prepare_part2:
-	echo "Preparing part 2"
+	ghc -o part2 part2.hs
 
 
 run_part1:
 	./part1
 
 run_part2:
-	echo "Running part 2"
+	./part2
 
 
 part1: | prepare_part1 run_part1
