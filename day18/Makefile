@@ -9,7 +9,7 @@ run_part1:
 	lua part1.lua
 
 run_part2:
-	echo "Running part 2"
+	lua part2.lua
 
 
 part1: | prepare_part1 run_part1
