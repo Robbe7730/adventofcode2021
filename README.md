@@ -23,3 +23,4 @@ Every day has a Makefile with `prepare_part_1`, `prepare_part_2`, `run_part_1` a
 15. [Kotlin](https://kotlinlang.org/)
 16. [C](https://en.wikipedia.org/wiki/C_(programming_language))
 17. [Haskell](https://www.haskell.org/)
+18. [Lua](https://www.lua.org/)
