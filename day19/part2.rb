@@ -22,6 +22,7 @@ def main
   end
 
   $corrected_scanner_coords[0] = scanners[0]
+  $beacon_coords = scanners[0]
 
   found = [0]
   queue = Queue.new
@@ -29,7 +30,7 @@ def main
   while !queue.empty?
     i = queue.pop
     for j in 0..(scanners.length-1) do
-      if j != i
+      if j != i && (!found.include? j)
         n = find_overlap_rotated(scanners, i, j)
         if n != nil && (!found.include? n)
           puts found.length.to_s + "/" + (scanners.length - 1).to_s
