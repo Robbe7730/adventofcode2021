@@ -9,7 +9,7 @@ run_part1:
 	ruby part1.rb
 
 run_part2:
-	echo "Running part 2"
+	ruby part2.rb
 
 
 part1: | prepare_part1 run_part1
