@@ -1,8 +1,8 @@
 prepare_part1:
-	pip install -r requirements.txt
+	echo "Preparing part 1"
 
 prepare_part2:
-	pip install -r requirements.txt
+	echo "Preparing part 2"
 
 
 run_part1:
