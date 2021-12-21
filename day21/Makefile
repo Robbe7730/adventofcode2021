@@ -9,7 +9,7 @@ run_part1:
 	php part1.php
 
 run_part2:
-	echo "Running part 2"
+	php part2.php
 
 
 part1: | prepare_part1 run_part1
