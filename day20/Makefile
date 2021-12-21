@@ -9,7 +9,7 @@ run_part1:
 	echo "Start minecraft, load the world, activate the structure blocks and start the program by placing a redstone block by the command block labeled \"Process kernel step (border=black)\""
 
 run_part2:
-	echo "Running part 2"
+	micropython part2.snek
 
 
 part1: | prepare_part1 run_part1
