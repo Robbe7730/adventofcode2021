@@ -2,14 +2,14 @@ prepare_part1:
 	npm install
 
 prepare_part2:
-	echo "Preparing part 2"
+	tsc
 
 
 run_part1:
 	node --max-old-space-size=8192 --max-semi-space-size=4096 part1.js
 
 run_part2:
-	echo "Running part 2"
+	node part2.js
 
 
 part1: | prepare_part1 run_part1
