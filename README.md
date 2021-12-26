@@ -28,3 +28,6 @@ Every day has a Makefile with `prepare_part_1`, `prepare_part_2`, `run_part_1` a
 20. [Minecraft](https://www.minecraft.net/) (part 1) | [Bash](https://www.gnu.org/software/bash/) (part 2)
 21. [PHP](https://www.php.net/)
 22. [Java](https://www.java.com/)
+23. [JavaScript](https://www.javascript.com/) (part 1) | [TypeScript](https://www.typescriptlang.org/) (part 2)
+24. [Python](https://www.python.org/)
+25. [Rust](https://www.rust-lang.org/)
