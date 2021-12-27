@@ -1,0 +1,406 @@
+w = serial[0]
+x = z
+x %= 26
+z //= 1
+x += 11
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 8
+y *= x
+z += y
+
+w = serial[1]
+x = z
+x %= 26
+z //= 1
+x += 14
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 13
+y *= x
+z += y
+
+w = serial[2]
+x = z
+x %= 26
+z //= 1
+x += 10
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 2
+y *= x
+z += y
+
+w = serial[3]
+x = z
+x %= 26
+z //= 26
+x += 0
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 7
+y *= x
+z += y
+
+w = serial[4]
+x = z
+x %= 26
+z //= 1
+x += 12
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 11
+y *= x
+z += y
+
+w = serial[5]
+x = z
+x %= 26
+z //= 1
+x += 12
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 4
+y *= x
+z += y
+
+w = serial[6]
+x = z
+x %= 26
+z //= 1
+x += 12
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 13
+y *= x
+z += y
+
+w = serial[7]
+x = z
+x %= 26
+z //= 26
+x += -8
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 13
+y *= x
+z += y
+
+w = serial[8]
+x = z
+x %= 26
+z //= 26
+x += -9
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 10
+y *= x
+z += y
+
+w = serial[9]
+x = z
+x %= 26
+z //= 1
+x += 11
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 1
+y *= x
+z += y
+
+w = serial[10]
+x = z
+x %= 26
+z //= 26
+x += 0
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 2
+y *= x
+z += y
+
+w = serial[11]
+x = z
+x %= 26
+z //= 26
+x += -5
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 14
+y *= x
+z += y
+
+w = serial[12]
+x = z
+x %= 26
+z //= 26
+x += -6
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 6
+y *= x
+z += y
+
+w = serial[13]
+x = z
+x %= 26
+z //= 26
+x += -12
+x = 1 if (x != w) else 0
+y = 25
+y *= x
+y += 1
+z *= y
+y = w
+y += 14
+y *= x
+z += y
+
+-----
+
+1, 11, 8
+1, 14, 13
+1, 10, 2
+26, 0, 7
+1, 12, 11
+1, 12, 4
+1, 12, 13
+26, -8, 13
+26, -9, 10
+1, 11, 1
+26, 0, 2
+26, -5, 14
+26, -6, 6
+26, -12, 14
+
+-----
+
+if (z % 26) + B != serial[D]:
+    z = (z // A) * 26 + (serial[D] + C)
+else:
+    z = z // A
+
+-----
+
+if (stack.top) + B != serial[D]:
+    if A != 1:
+        stack.pop()
+    stack.push(serial[D] + C)
+else:
+    if A != 1:
+        stack.pop()
+
+-----
+
+x = stack.pop()
+if (x + B) != serial[D]:
+    stack.push(serial[D] + C)
+
+OR
+
+stack.push(serial[D] + C)
+
+-----
+
+z = serial[0] + 8
+z = (z * 26) + serial[1] + 13
+z = z // 26
+z = (z * 26) + serial[2] + 2
+
+z' = z // 26
+if (z % 26) != serial[3]:
+    z = (z' * 26) + serial[3] + 7
+else:
+    z = z' + 1
+
+z = (z * 26) + serial[4] + 11
+z = (z * 26) + serial[5] + 4
+z = z // 26
+z = (z * 26) + serial[6] + 13
+
+z' = z // 26
+if ((z % 26) - 8) != serial[7]:
+    z = (z' * 26) + serial[7] + 13
+else:
+    z = z' + 1
+
+z' = z // 26
+if ((z % 26) - 9) != serial[8]:
+    z' = (z' * 26) + serial[8] + 10
+else:
+    z' += 1
+
+z = (z * 26) + serial[9] + 1
+
+z' = z // 26
+if (z % 26) != serial[10]:
+    z = (z' * 26) + serial[10] + 2
+else:
+    z += 1
+
+z' = z // 26
+if ((z % 26) - 5) != serial[11]:
+    z = (z' * 26) + serial[11] + 14
+else:
+    z += 1
+
+z' = z // 26
+if ((z % 26) - 6) != serial[12]:
+    z' = (z' * 26) + serial[12] + 6
+else:
+    z' += 1
+
+z' = z // 26
+if ((z % 26) - 12) != serial[13]:
+    z' = (z' * 26) + serial[13] + 14
+else:
+    z' += 1
+
+-----
+
+stack.push(serial[0] + 8)
+stack.push(serial[1] + 13)
+stack.push(serial[2] + 2)
+
+x = stack.pop()
+
+if x != serial[3]:
+    stack.push(serial[3] + 7)
+
+stack.push(serial[4] + 11)
+stack.push(serial[5] + 4)
+stack.push(serial[6] + 13)
+
+x = stack.pop()
+if (x - 8) != serial[7]:
+    stack.push(serial[7] + 13)
+
+x = stack.pop()
+if (x - 9) != serial[8]:
+    stack.push(serial[8] + 10)
+
+stack.push(serial[9] + 1)
+
+x = stack.pop()
+if x != serial[10]:
+    stack.push(serial[10] + 2)
+
+x = stack.pop()
+if (x - 5) != serial[11]:
+    stack.push(serial[11] + 14)
+
+x = stack.pop()
+if (x - 6) != serial[12]:
+    stack.push(serial[12] + 6)
+
+x = stack.pop()
+if (x - 12) != serial[13]:
+    stack.push(serial[13] + 14)
+
+-----
+
+assert (serial[2] + 2) == serial[3]
+assert (serial[6] + 5) == serial[7]
+assert (serial[5] - 5) == serial[8]
+assert (serial[9] + 1) == serial[10]
+assert (serial[4] + 6) == serial[11]
+assert (serial[1] + 7) == serial[12]
+assert (serial[0] - 4) == serial[13]
+
+-----
+
+0123456789ABCD
+92793949489995
+
+assert (7 + 2) == 9
+assert (4 + 5) == 9
+assert (9 - 5) == 4 
+assert (8 + 1) == 9 
+assert (3 + 6) == 9 
+assert (2 + 7) == 9 
+assert (9 - 4) == 5 
+
+-----
+
+ranges
+
+0: [5, 9] => 13: [1, 5]
+1: [1, 2] => 12: [8, 9]
+4: [1, 3] => 11: [7, 9]
+9: [1, 8] => 10: [2, 9]
+5: [6, 9] =>  8: [1, 4]
+6: [1, 4] =>  7: [6, 9]
+2: [1, 7] =>  3: [3, 9]
+
+-----
+
+
+ 0: [5, 9]
+ 1: [1, 2]
+ 2: [1, 7]
+ 3: [3, 9]
+ 4: [1, 3]
+ 5: [6, 9]
+ 6: [1, 4]
+ 7: [6, 9]
+ 8: [1, 4]
+ 9: [1, 8]
+10: [2, 9]
+11: [7, 9]
+12: [8, 9]
+13: [1, 5]
+
+=> max = 92793949489995
+=> min = 51131616112781
